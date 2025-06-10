@@ -238,7 +238,7 @@ int main(int argc, char **argv) {
 
   struct wl_display *display = wl_display_connect(NULL);
   if (!display) {
-    printf("ERROR!");
+    cout << "[ERROR] Cannot connect to wayland display, exiting..." << endl;
     return 1;
   }
   struct wl_registry *reg = wl_display_get_registry(display);
